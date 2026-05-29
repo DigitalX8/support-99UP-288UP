@@ -3,9 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ALLWIN789|ช่องทางติดต่อสำรอง</title>
+  <title>288UP | ช่องทางติดต่อสำรอง</title>
+
   <link rel="stylesheet" href="style.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
 </head>
+
 <body>
 
 <main class="page">
@@ -15,7 +22,25 @@
   </section>
 
   <section class="section banner-section">
-    <img src="assets/banner.webp" alt="ช่องทางติดต่อสำรอง" class="banner-img" />
+    <div class="swiper bannerSwiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <img src="assets/banner.webp" alt="Banner 1" class="banner-img" />
+        </div>
+
+        <div class="swiper-slide">
+          <img src="assets/banner2.webp" alt="Banner 2" class="banner-img" />
+        </div>
+
+        <div class="swiper-slide">
+          <img src="assets/banner3.webp" alt="Banner 3" class="banner-img" />
+        </div>
+
+      </div>
+
+      <div class="swiper-pagination"></div>
+    </div>
   </section>
 
   <section class="section text-section">
@@ -86,6 +111,30 @@
   </section>
 
 </main>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  new Swiper(".bannerSwiper", {
+    loop: true,
+    effect: "fade",
+    speed: 1000,
+
+    fadeEffect: {
+      crossFade: true
+    },
+
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    }
+  });
+</script>
 
 </body>
 </html>
