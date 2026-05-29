@@ -330,6 +330,8 @@ h1{
 
 /* DESKTOP */
 
+
+
 @media (min-width:768px){
 
   .page{
@@ -369,4 +371,36 @@ h1{
   h1{
     font-size:34px;
   }
+}
+
+.bannerSwiper {
+  width: 100%;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  background: #000;
+}
+
+.swiper-slide img {
+  width: 100%;
+  display: block;
+}
+
+.swiper-pagination {
+  bottom: 8px !important;
+}
+
+.swiper-pagination-bullet {
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  opacity: .45;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ff6a00;
+  opacity: 1;
+  box-shadow: 0 0 10px rgba(255, 106, 0, .9);
 }
