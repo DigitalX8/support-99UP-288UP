@@ -5,31 +5,31 @@ window.CHANNELS_CONFIG = {
   // การ์ด LINE บริการ
   lineService: {
     enabled: true,
-    url: "https://lin.ee/6AE5uVB"
+    url: "https://lin.ee/XacLnnA"
   },
   // การ์ด LINE สำรอง
   lineBackup: {
     enabled: true,
-    url: "https://lin.ee/6AE5uVB"
+    url: "https://lin.ee/s3yDkSS"
   },
   // การ์ด Telegram
   telegram: {
-    enabled: true,
+    enabled: false,
     url: "https://bit.ly/288up-kenni"
   },
   // การ์ด Live Chat: ของเดิมเปิดลิงก์ ไม่มีวิดเจ็ต เปลี่ยนลิงก์ได้ที่ url
   livechat: {
-    enabled: true,
+    enabled: false,
     url: "https://bit.ly/288up-kenni"
   },
   // การ์ดเว็บไซต์หลัก
   website: {
     enabled: true,
-    url: "https://bit.ly/288up-kenni"
+    url: "https://288up.astarxyz.org/"
   },
   // การ์ด WhatsApp
   whatsapp: {
-    enabled: true,
+    enabled: false,
     url: "https://bit.ly/288up-kenni"
   }
 };
