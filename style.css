@@ -208,6 +208,10 @@ h1{
   transition:.25s ease;
 }
 
+.contact-card[hidden]{
+  display:none;
+}
+
 .contact-card:hover{
   transform:
     translateY(-4px)

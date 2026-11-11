@@ -55,7 +55,7 @@
 
   <section class="section contact-section">
 
-    <a href="https://lin.ee/6AE5uVB" class="contact-card line" target="_blank">
+    <a data-channel="lineService" class="contact-card line" target="_blank">
       <div class="icon"><img src="assets/linep.png" alt="LINE"></div>
       <div class="contact-text">
         <h2>Line บริการ</h2>
@@ -64,7 +64,7 @@
       <div class="action-badge">คลิ๊ก</div>
     </a>
 
-    <a href="https://lin.ee/6AE5uVB" class="contact-card line" target="_blank">
+    <a data-channel="lineBackup" class="contact-card line" target="_blank">
       <div class="icon"><img src="assets/linep.png" alt="LINE"></div>
       <div class="contact-text">
         <h2>ไลน์สำรอง</h2>
@@ -73,7 +73,7 @@
       <div class="action-badge">คลิ๊ก</div>
     </a>
 
-    <a href="https://bit.ly/288up-kenni" class="contact-card telegram" target="_blank">
+    <a data-channel="telegram" class="contact-card telegram" target="_blank">
       <div class="icon"><img src="assets/telegram.png" alt="Telegram"></div>
       <div class="contact-text">
         <h2>Telegram</h2>
@@ -82,7 +82,7 @@
       <div class="action-badge">คลิ๊ก</div>
     </a>
 
-    <a href="https://bit.ly/288up-kenni" class="contact-card livechat" target="_blank">
+    <a data-channel="livechat" class="contact-card livechat" target="_blank">
       <div class="icon"><img src="assets/livechat.png" alt="Live Chat"></div>
       <div class="contact-text">
         <h2>Live Chat</h2>
@@ -91,7 +91,7 @@
       <div class="action-badge">คลิ๊ก</div>
     </a>
 
-    <a href="https://bit.ly/288up-kenni" class="contact-card website" target="_blank">
+    <a data-channel="website" class="contact-card website" target="_blank">
       <div class="icon"><img src="assets/288up.jpeg" alt="Website"></div>
       <div class="contact-text">
         <h2>ทางเข้าเว็บไซต์หลัก</h2>
@@ -100,7 +100,7 @@
       <div class="action-badge">คลิ๊ก</div>
     </a>
 
-    <a href="https://bit.ly/288up-kenni" class="contact-card whatsapp" target="_blank">
+    <a data-channel="whatsapp" class="contact-card whatsapp" target="_blank">
       <div class="icon"><img src="assets/whatsapp.png" alt="Whatsapp"></div>
       <div class="contact-text">
         <h2>Whatsapp</h2>
@@ -112,6 +112,15 @@
   </section>
 
 </main>
+
+<script src="channels.config.js"></script>
+<script>
+  document.querySelectorAll(".contact-card[data-channel]").forEach((card) => {
+    const channel = window.CHANNELS_CONFIG[card.dataset.channel];
+    card.hidden = channel.enabled === false;
+    card.href = channel.url;
+  });
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
